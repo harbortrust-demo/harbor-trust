@@ -1,0 +1,244 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HarborTrust Banking</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f5f9;
+  color: #172b4d;
+}
+
+header {
+  background: #082c50;
+  color: white;
+  padding: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.demo {
+  background: #ffdf8a;
+  color: #493500;
+  text-align: center;
+  padding: 9px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.hero {
+  text-align: center;
+  padding: 65px 20px;
+  background: #0c416d;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 34px;
+  margin-bottom: 18px;
+}
+
+.hero p {
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+button {
+  border: none;
+  border-radius: 7px;
+  padding: 14px 22px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.primary {
+  background: #e6ad42;
+  color: #102b46;
+}
+
+.container {
+  max-width: 950px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 22px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 12px #0000000c;
+}
+
+.balance {
+  background: #082c50;
+  color: white;
+}
+
+.balance h2 {
+  font-size: 30px;
+  margin-top: 15px;
+}
+
+.dashboard {
+  display: none;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.actions button {
+  background: #e9f1fa;
+  color: #082c50;
+}
+
+.transaction {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0;
+  border-bottom: 1px solid #eee;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  background: #082c50;
+  color: white;
+  margin-top: 40px;
+}
+
+@media (max-width: 500px) {
+  .hero h1 {
+    font-size: 27px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="demo">
+  DEMO WEBSITE — NOT A REAL BANK
+</div>
+
+<header>
+  <div class="logo">HarborTrust</div>
+  <div>Banking</div>
+</header>
+
+<section class="hero" id="home">
+  <h1>Banking Made Simple</h1>
+
+  <p>
+    Welcome to HarborTrust.<br>
+    Experience a modern digital banking demonstration.
+  </p>
+
+  <button class="primary" onclick="openDashboard()">
+    Explore Demo Account
+  </button>
+</section>
+
+<section class="container dashboard" id="dashboard">
+
+  <h2>Welcome to Your Dashboard</h2>
+
+  <p style="margin:12px 0">
+    Demo Customer Account
+  </p>
+
+  <div class="card balance">
+    <p>Demo Account Balance</p>
+
+    <h2>₦2,450,000.00</h2>
+
+    <p style="margin-top:12px">
+      Fictional balance — no real funds
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>Quick Services</h3>
+
+    <div class="actions">
+      <button onclick="demoMessage()">Transfer</button>
+      <button onclick="demoMessage()">Deposit</button>
+      <button onclick="demoMessage()">Withdraw</button>
+      <button onclick="demoMessage()">Pay Bills</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Recent Transactions</h3>
+
+    <div class="transaction">
+      <span>Shopping (Demo)</span>
+      <strong>-₦15,000</strong>
+    </div>
+
+    <div class="transaction">
+      <span>Salary (Demo)</span>
+      <strong>+₦250,000</strong>
+    </div>
+
+    <div class="transaction">
+      <span>Electricity (Demo)</span>
+      <strong>-₦8,500</strong>
+    </div>
+  </div>
+
+  <button class="primary" onclick="goHome()">
+    Back to Home
+  </button>
+
+</section>
+
+<footer>
+  <p>HarborTrust Banking Demo</p>
+
+  <p style="margin-top:10px">
+    © 2026 HarborTrust. Demonstration only.
+  </p>
+</footer>
+
+<script>
+function openDashboard() {
+  document.getElementById("home").style.display = "none";
+  document.getElementById("dashboard").style.display = "block";
+  window.scrollTo(0, 0);
+}
+
+function goHome() {
+  document.getElementById("dashboard").style.display = "none";
+  document.getElementById("home").style.display = "block";
+  window.scrollTo(0, 0);
+}
+
+function demoMessage() {
+  alert("This is a demonstration. No money has been moved.");
+}
+</script>
+
+</body>
+</html>
